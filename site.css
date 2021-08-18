@@ -41,5 +41,9 @@ nav > ul > li {
     display: inline-block;
     list-style: none;
     margin: 0 5px 0 5px;
+}
 
+main {
+    display: block;
+    background-image: url(images/background.png);
 }
