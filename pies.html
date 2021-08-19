@@ -55,5 +55,32 @@
         </nav>
     </footer>
 </body>
+<script>
+    window.addEventListener("DOMContentLoaded", function (e) {
+        const orderButtons = document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function(ebutton) {
+
+        button.addEventListener("click", function (e) {
+            const button = e.currentTarget;
+            const container = button.parentNode;
+
+            const order = {
+                id: button.getAttributr("data-order"),
+                title: container.querySelector(".title").innerText,
+                price: container.querySelector(".price").innerText,
+                desc: container.querySelector(".desc").innerText
+            };
+
+            localStorage.setItem("oder", JSON.stringify(order));
+
+            const url = window.location.href.replace("pies.html", "order.html");
+            window.location.href = url;
+        });
+
+        
+        });
+    });
+</script>
 
 </html>
